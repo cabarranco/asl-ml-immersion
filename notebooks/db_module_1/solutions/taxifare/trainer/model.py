@@ -40,7 +40,7 @@ INPUT_COLS = [
 
 
 def features_and_labels(row_data):
-    for unwanted_col in ["key"]:
+    for unwanted_col in UNWANTED_COLS:
         row_data.pop(unwanted_col)
     label = row_data.pop(LABEL_COLUMN)
     return row_data, label
